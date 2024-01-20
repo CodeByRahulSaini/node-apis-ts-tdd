@@ -1,43 +1,44 @@
 # REST APIs for Note Application
 
+RESTful APIs using Node.js which can serve as the backend for a simple note-taking application. They allow users to create an account, authenticate, and perform CRUD (Create, Read, Update, Delete) operations on their notes. Each note have a title, a body and a list of tags.
+
+## Features
+
+    - User Authentication & Authorization
+    - Database Integration | MongoDB | Typegoose
+    - Error Handling and Validations
+    - Testing
+    - Typescript
+    - Rate Limiting | CORS | Helmet | Graceful Shutdown
+
 ## Install
 
     npm install
-
-or
-
-    yarn
 
 ## Run the app
 
     npm run dev
 
-or
-
-    yarn dev
+Make sure you have valid `.env` file. You can take reference from `.env.sample`
 
 ## Run the tests
 
     npm run test
 
-or
-
-    yarn test
-
-# REST API
-
-The REST API to the example app is described below.
+# REST APIs
 
 ### Login
 
 `POST /auth/login`
 
-    curl --location 'localhost:5001/api/auth/login' \
+    curl -v --location 'localhost:5001/api/auth/login' \
     --header 'Content-Type: application/json' \
     --data-raw '{
         "email": "test@gmail.com",
         "password":"test1234"
     }'
+
+Above API will return "Set-Cookie" in response headers which should be used in other APIs for authorization.
 
 ### Register
 
@@ -55,8 +56,10 @@ The REST API to the example app is described below.
 
 `GET /auth/refresh`
 
-    curl --location 'localhost:5001/api/auth/refresh' \
+    curl -v --location 'localhost:5001/api/auth/refresh' \
     --header 'Cookie: access_token=access_token_here; refresh_token=refresh_token_here'
+
+Above API will return "Set-Cookie" in response headers which should be used in other APIs for authorization.
 
 ### Logout
 
@@ -123,50 +126,3 @@ The REST API to the example app is described below.
     --data '{
         "userId": "user_id_here"
     }'
-
-## Features
-
-- Real-time collaboration on a shared board.
-- Ability to draw free-form lines on the board.
-- Undo and redo functionality.
-- Private Rooms.
-
-## Installation
-
-```bash
-  npm install
-  npm run dev
-```
-
-or
-
-```bash
-  yarn
-  yarn dev
-```
-
-## Contributing
-
-Contributions are always welcome!
-
-See `contributing.md` for ways to get started.
-
-Please adhere to this project's `code of conduct`.
-
-## Running Tests
-
-To run tests, run the following command
-
-```bash
-  npm run test
-```
-
-or
-
-```bash
-  yarn test
-```
-
-## Demo
-
-http://collaborative-board-frontend.vercel.app
