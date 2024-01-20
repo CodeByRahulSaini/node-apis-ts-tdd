@@ -3,7 +3,7 @@ import { app } from '../../app'
 import { Status } from '../../utils/response.util'
 
 describe('testing /auth', () => {
-  let setCookies
+  let setCookies: string
   const userDetails = {
     name: 'user',
     email: 'user@test.com',

@@ -5,7 +5,7 @@ import { Status } from '../../utils/response.util'
 import { Note } from './note.model'
 
 describe('testing /note', () => {
-  let setCookies
+  let setCookies: string
 
   const userDetails = {
     name: 'user',

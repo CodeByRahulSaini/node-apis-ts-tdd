@@ -4,7 +4,7 @@ describe('test utils', () => {
     const userDetails = {
       userId: '1234'
     }
-    let jwtToken
+    let jwtToken: string
     test('should sign JWT', async () => {
       jwtToken = await signJwt(userDetails, 'accessTokenPrivateKey')
       expect(typeof jwtToken).toBe('string')
