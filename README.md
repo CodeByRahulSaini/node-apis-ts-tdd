@@ -4,12 +4,12 @@ RESTful APIs using Node.js which can serve as the backend for a simple note-taki
 
 ## Features
 
-    - User Authentication & Authorization
-    - Database Integration | MongoDB | Typegoose
-    - Error Handling and Validations
-    - Testing
-    - Typescript
-    - Rate Limiting | CORS | Helmet | Graceful Shutdown
+- User Authentication & Authorization
+- Database Integration | MongoDB | Typegoose
+- Error Handling and Validations
+- Testing
+- Typescript
+- Rate Limiting | CORS | Helmet | Graceful Shutdown
 
 ## Install
 
@@ -25,8 +25,11 @@ Make sure you have valid `.env` file. You can take reference from `.env.sample`
 
     npm run test
 
-# REST APIs
+### Test Coverage
 
+<img width="1037" alt="Screenshot 2024-01-21 at 2 29 01 AM" src="https://github.com/CodeByRahulSaini/node-apis-ts-tdd/assets/30212408/612a51a2-92b4-424e-912a-80608cd44f43">
+
+# REST APIs
 ### Login
 
 `POST /auth/login`
